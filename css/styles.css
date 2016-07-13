@@ -31,7 +31,7 @@ header {
 
 footer {
     font-style: italic;
-    margin: 1em 0;
+    margin: 1em 0 6em;
 }
 
 h1,
@@ -322,7 +322,7 @@ button:focus {
     }
 
     footer {
-        margin: 1.75em 0;
+        margin: 1.75em 0 8em;
     }
 
 }
