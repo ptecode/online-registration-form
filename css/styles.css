@@ -1,0 +1,361 @@
+
+/* =================================
+  Base Styles
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: #fffcef;
+    color: #68625c;
+
+}
+
+header,
+footer,
+.banner {
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    background-color: #68625c;
+    padding: 0.75em 0;
+}
+
+footer {
+    font-style: italic;
+    margin: 1em 0;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+h1,
+h2,
+legend {
+    font-weight: 500;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #fffcef;
+    font-size: 1.7em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+.banner {
+    padding: 1em 1.25em 0.5em;
+}
+
+p {
+    margin-top: 0.35em;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 2px solid #000;
+    margin-top: 0;
+    margin-bottom: 2em;
+}
+
+.first-hr {
+    border-top: 4px solid #000;
+    margin-bottom: 3px;
+}
+
+form {
+    width: 100%;
+    padding: 1em;
+}
+
+/* ---- Form Fields ---- */
+
+fieldset {
+    margin-bottom: 1em;
+    border: none;
+    padding: 0;
+}
+
+legend {
+    font-size: 1.4em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+::-webkit-input-placeholder {
+    text-align: right;
+    font-weight: 300;
+}
+
+textarea::-webkit-input-placeholder {
+    text-align: left;
+}
+
+.contact legend {
+    margin-bottom: 0.8em;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    outline: 0;
+    border: none;
+    background-color: #d3fcfb;
+    color: #3db6b3;
+    padding: 0.8em;
+    height: auto;
+    border-bottom: 3px solid rgba(0,0,0,0.05);
+    border-radius: 0.3em;
+    margin-bottom: 1.4em;
+    font-size: 1em;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.06);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+select {
+    height: 3.2em;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+    box-shadow: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    outline: 0;
+    background-color: #ebfefd;
+    box-shadow: 0 0 5px #3db6b3;
+    border: 1px solid #3db6b3;
+}
+
+#zip {
+    width: 50%;
+}
+
+.newsletter legend {
+    margin-bottom: 0.4em;
+}
+
+.newsletter label:not([for]),
+label[for="schedule"],
+label[for="topics"] {
+    margin-top: 0.7em;
+}
+
+.newsletter select {
+    width: auto;
+}
+
+
+/* ---- Checkbox and Radio button  ---- */
+
+input[type="checkbox"],
+input[type="radio"] {
+    position: absolute;
+    left: -1000em;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.25em;
+}
+
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #d3fcfb;
+    margin: 0 10px 4px 0;
+    vertical-align: middle;
+    border: 1px dotted #3db6b3;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+
+input[type="radio"] + label::before {
+    border-radius: 50%;
+}
+
+input[type="checkbox"]:focus + label::before,
+input[type="radio"]:focus + label::before {
+    border: 1px solid #3db6b3;
+    box-shadow: 0 0 5px #3db6b3;
+}
+
+input[type="checkbox"]:checked + label::before{
+    content: "\2713";
+    text-align: center;
+    color: #3db6b3;
+    border-style: solid;
+}
+
+input[type="radio"]:checked + label::before {
+    background: radial-gradient(circle, #3db6b3 40%, #d3fcfb 40%);
+    border-style: solid;
+}
+
+
+/* ---- Submit ---- */
+
+.terms-of-service {
+    font-size: 0.85em;
+    font-weight: 300;
+}
+
+.terms-of-service a {
+    color: #ffb74e;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+.terms-of-service a:hover,
+.terms-of-service a:focus {
+    outline: 0;
+    color: #ff9700;
+}
+
+button {
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding: 0.5em;
+    margin-top: 0.7em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    background-color: #fc837e;
+    border: none;
+    color: #fffcef;
+    border-bottom: 3px solid #fa3931;
+    transition: background-color 0.3s;
+}
+
+button:hover,
+button:focus {
+    outline: 0;
+    background-color: #fb6b65;
+}
+
+/* =================================
+  Media Queries 760px
+==================================== */
+
+@media (min-width: 760px) {
+
+    form {
+        width: 70%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .banner {
+        padding-top: 1.5em;
+    }
+
+    p {
+        margin-top: 0.5em;
+    }
+
+    .contact legend {
+        margin-bottom: 1em;
+    }
+
+    .contact label,
+    .contact input,
+    .contact select {
+        display: inline-block;
+    }
+
+    .contact label {
+        width: 30%;
+    }
+
+    .contact input,
+    .contact select {
+        width: 69%;
+    }
+
+    #zip {
+        width: 35%;
+    }
+
+    .newsletter legend {
+        margin-bottom: 0.2em;
+    }
+
+    .newsletter label:not([for]),
+    label[for="schedule"],
+    label[for="topics"] {
+        margin-top: 0.8em;
+    }
+
+    .newsletter select {
+        width: 40%;
+    }
+
+    footer {
+        margin: 1.75em 0;
+    }
+
+}
+
+
+/* =================================
+  Media Queries 1024px
+==================================== */
+
+@media (min-width: 1024px) {
+
+    form {
+        max-width: 610px;
+    }
+
+    .banner {
+        padding-top: 1.75em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    #zip {
+        width: 30%;
+    }
+
+    .newsletter select {
+        width: 35%;
+    }
+
+}
